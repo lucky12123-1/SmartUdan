@@ -1,8 +1,21 @@
-# Railway monorepo hints — create TWO services in the Railway dashboard.
-
-[build]
-builder = "DOCKERFILE"
-
-# Backend service: set Root Directory = backend, Dockerfile = Dockerfile
-# Frontend service: set Root Directory = frontend, Dockerfile = Dockerfile
-# Add Redis plugin and link REDIS_URL to the backend service.
+# UdanSmart monorepo — do NOT put [build] here.
+#
+# Railway reads this file from the repo root by default. A root-level
+# `builder = "DOCKERFILE"` breaks deploys because there is no Dockerfile here.
+#
+# Create TWO services in the Railway project:
+#
+#   Backend service
+#     Root Directory  → backend
+#     Config file     → /backend/railway.toml   (absolute path from repo root)
+#     Watch paths     → /backend/**
+#
+#   Frontend service
+#     Root Directory  → frontend
+#     Config file     → /frontend/railway.toml
+#     Watch paths     → /frontend/**
+#
+#   Redis
+#     Add Redis plugin; reference REDIS_URL on the backend service.
+#
+# See backend/railway.toml and frontend/railway.toml for build settings.

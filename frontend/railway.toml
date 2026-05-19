@@ -1,0 +1,14 @@
+# Frontend service — set Railway Root Directory = frontend
+# and Config file path = /frontend/railway.toml
+#
+# Set VITE_API_BASE_URL in Railway variables (build-time) to your backend public URL.
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+watchPatterns = ["/frontend/**"]
+
+[deploy]
+# nginx listens on port 80 inside the container
+healthcheckPath = "/"
+healthcheckTimeout = 60

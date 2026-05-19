@@ -1,0 +1,11 @@
+# Backend service — set Railway Root Directory = backend
+# and Config file path = /backend/railway.toml
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+watchPatterns = ["/backend/**"]
+
+[deploy]
+healthcheckPath = "/api/health/"
+healthcheckTimeout = 120
