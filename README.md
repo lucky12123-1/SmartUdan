@@ -1,4 +1,4 @@
-# SkyPredict India
+# SmartUdan India
 
 India-first domestic flight price prediction for Phase 1 routes across 82 Indian airports. The app predicts the cheapest travel dates, buy/wait signals, India holiday surges, festive price memory, and a 60-day price trend in INR.
 
